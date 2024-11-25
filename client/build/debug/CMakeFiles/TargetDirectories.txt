@@ -1,0 +1,9 @@
+C:/Users/myheng/Desktop/myChat/client/build/debug/CMakeFiles/client.dir
+C:/Users/myheng/Desktop/myChat/client/build/debug/CMakeFiles/edit_cache.dir
+C:/Users/myheng/Desktop/myChat/client/build/debug/CMakeFiles/rebuild_cache.dir
+C:/Users/myheng/Desktop/myChat/client/build/debug/CMakeFiles/list_install_components.dir
+C:/Users/myheng/Desktop/myChat/client/build/debug/CMakeFiles/install.dir
+C:/Users/myheng/Desktop/myChat/client/build/debug/CMakeFiles/install/local.dir
+C:/Users/myheng/Desktop/myChat/client/build/debug/CMakeFiles/install/strip.dir
+C:/Users/myheng/Desktop/myChat/client/build/debug/CMakeFiles/client_autogen_timestamp_deps.dir
+C:/Users/myheng/Desktop/myChat/client/build/debug/CMakeFiles/client_autogen.dir

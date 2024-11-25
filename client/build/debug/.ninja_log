@@ -1,0 +1,12 @@
+# ninja log v6
+24	280	7542426766657059	client_autogen/timestamp	9ada9080ce2a9136
+24	280	7542426766657059	C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/mocs_compilation.cpp	9ada9080ce2a9136
+2635	7856	7542422791317849	CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.obj	c1e1c233da02d052
+24	280	7542426766657059	client_autogen/mocs_compilation.cpp	9ada9080ce2a9136
+24	280	7542426766657059	C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/timestamp	9ada9080ce2a9136
+448	4604	7542426770893230	CMakeFiles/client.dir/main.cpp.obj	89e8d1c99fdbe621
+494	4759	7542426771352016	CMakeFiles/client.dir/mainwindow.cpp.obj	4f7cd01fc839da09
+4759	5193	7542426814004884	client.exe	53077625d072482c
+281	448	7542426770783538	client_autogen/EWIEGA46WW/qrc_res.cpp	f49c0a003ef96c02
+281	448	7542426770783538	C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/qrc_res.cpp	f49c0a003ef96c02
+554	912	7542426771951966	CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_res.cpp.obj	396f35791ef3249a
