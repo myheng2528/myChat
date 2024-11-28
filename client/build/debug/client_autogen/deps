@@ -5,9 +5,15 @@ client_autogen/timestamp: \
 	C:/Users/myheng/Desktop/myChat/client/build/debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
 	C:/Users/myheng/Desktop/myChat/client/build/debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
 	C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/moc_predefs.h \
+	C:/Users/myheng/Desktop/myChat/client/global.cpp \
+	C:/Users/myheng/Desktop/myChat/client/global.h \
+	C:/Users/myheng/Desktop/myChat/client/logindialog.cpp \
+	C:/Users/myheng/Desktop/myChat/client/logindialog.h \
 	C:/Users/myheng/Desktop/myChat/client/main.cpp \
 	C:/Users/myheng/Desktop/myChat/client/mainwindow.cpp \
 	C:/Users/myheng/Desktop/myChat/client/mainwindow.h \
+	C:/Users/myheng/Desktop/myChat/client/registerdialog.cpp \
+	C:/Users/myheng/Desktop/myChat/client/registerdialog.h \
 	C:/Users/myheng/Desktop/myChat/client/res.qrc \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/q20functional.h \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/q20memory.h \
@@ -147,7 +153,9 @@ client_autogen/timestamp: \
 	D:/Qt/6.6.3/mingw_64/include/QtGui/qtransform.h \
 	D:/Qt/6.6.3/mingw_64/include/QtGui/qwindowdefs.h \
 	D:/Qt/6.6.3/mingw_64/include/QtGui/qwindowdefs_win.h \
+	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QDialog \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QMainWindow \
+	D:/Qt/6.6.3/mingw_64/include/QtWidgets/qdialog.h \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/qmainwindow.h \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/qsizepolicy.h \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/qtabwidget.h \
@@ -553,5 +561,7 @@ client_autogen/timestamp: \
 	D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h \
 	D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
 	D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
+	C:/Users/myheng/Desktop/myChat/client/logindialog.ui \
 	C:/Users/myheng/Desktop/myChat/client/mainwindow.ui \
+	C:/Users/myheng/Desktop/myChat/client/registerdialog.ui \
 	D:/Qt/Tools/CMake_64/bin/cmake.exe

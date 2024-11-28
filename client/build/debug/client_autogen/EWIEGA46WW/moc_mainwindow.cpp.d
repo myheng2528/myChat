@@ -1,5 +1,7 @@
 C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/myheng/Desktop/myChat/client/mainwindow.h \
   C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/moc_predefs.h \
+  C:/Users/myheng/Desktop/myChat/client/logindialog.h \
+  C:/Users/myheng/Desktop/myChat/client/registerdialog.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/q20functional.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/q20memory.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/q20type_traits.h \
@@ -138,7 +140,9 @@ C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/moc_
   D:/Qt/6.6.3/mingw_64/include/QtGui/qtransform.h \
   D:/Qt/6.6.3/mingw_64/include/QtGui/qwindowdefs.h \
   D:/Qt/6.6.3/mingw_64/include/QtGui/qwindowdefs_win.h \
+  D:/Qt/6.6.3/mingw_64/include/QtWidgets/QDialog \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/QMainWindow \
+  D:/Qt/6.6.3/mingw_64/include/QtWidgets/qdialog.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qmainwindow.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qsizepolicy.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qtabwidget.h \

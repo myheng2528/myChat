@@ -1,12 +1,15 @@
 # ninja log v6
-24	280	7542426766657059	client_autogen/timestamp	9ada9080ce2a9136
-24	280	7542426766657059	C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/mocs_compilation.cpp	9ada9080ce2a9136
-2635	7856	7542422791317849	CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.obj	c1e1c233da02d052
-24	280	7542426766657059	client_autogen/mocs_compilation.cpp	9ada9080ce2a9136
-24	280	7542426766657059	C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/timestamp	9ada9080ce2a9136
-448	4604	7542426770893230	CMakeFiles/client.dir/main.cpp.obj	89e8d1c99fdbe621
-494	4759	7542426771352016	CMakeFiles/client.dir/mainwindow.cpp.obj	4f7cd01fc839da09
-4759	5193	7542426814004884	client.exe	53077625d072482c
-281	448	7542426770783538	client_autogen/EWIEGA46WW/qrc_res.cpp	f49c0a003ef96c02
-281	448	7542426770783538	C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/qrc_res.cpp	f49c0a003ef96c02
-554	912	7542426771951966	CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_res.cpp.obj	396f35791ef3249a
+55	1260	7543863348512822	client_autogen/timestamp	9ada9080ce2a9136
+55	1260	7543863348512822	C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/mocs_compilation.cpp	9ada9080ce2a9136
+1262	8752	7543863350098588	CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.obj	c1e1c233da02d052
+55	1260	7543863348512822	client_autogen/mocs_compilation.cpp	9ada9080ce2a9136
+55	1260	7543863348512822	C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/timestamp	9ada9080ce2a9136
+1474	3127	7543840866187681	CMakeFiles/client.dir/client_autogen/EWIEGA46WW/qrc_res.cpp.obj	396f35791ef3249a
+766	1063	7543840861901652	client_autogen/EWIEGA46WW/qrc_res.cpp	f49c0a003ef96c02
+766	1063	7543840861901652	C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/qrc_res.cpp	f49c0a003ef96c02
+1359	9408	7543863351071107	CMakeFiles/client.dir/main.cpp.obj	89e8d1c99fdbe621
+1543	9168	7543863352924470	CMakeFiles/client.dir/mainwindow.cpp.obj	4f7cd01fc839da09
+1801	9768	7543863355497580	CMakeFiles/client.dir/logindialog.cpp.obj	ec105e653a1827de
+9897	11189	7543863436462673	client.exe	fa83c4b72d3bba22
+2009	9897	7543863357577703	CMakeFiles/client.dir/registerdialog.cpp.obj	a85761c69adfda55
+1346	8287	7543840864913619	CMakeFiles/client.dir/global.cpp.obj	3187ce3f819aa86b

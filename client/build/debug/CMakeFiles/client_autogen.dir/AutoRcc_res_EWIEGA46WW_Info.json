@@ -10,6 +10,7 @@
 	"INPUTS" : 
 	[
 		"C:/Users/myheng/Desktop/myChat/client/icon.ico",
+		"C:/Users/myheng/Desktop/myChat/client/style/stylesheet.qss",
 		"C:/Users/myheng/Desktop/myChat/client/res/ice.png"
 	],
 	"LOCK_FILE" : "C:/Users/myheng/Desktop/myChat/client/build/debug/CMakeFiles/client_autogen.dir/AutoRcc_res_EWIEGA46WW_Lock.lock",

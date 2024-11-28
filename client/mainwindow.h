@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "logindialog.h"
+#include "registerdialog.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,5 +22,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    std::shared_ptr<LoginDialog> _login_dlg;
+    std::shared_ptr<RegisterDialog>  _reg_dlg;
+private slots:
+    void SoltSwitchReg();
 };
 #endif // MAINWINDOW_H
