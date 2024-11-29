@@ -1,0 +1,19 @@
+//
+// Created by myheng on 24-11-29.
+//
+
+#pragma once
+#include <boost/beast/http.hpp>
+#include <boost/beast.hpp>
+#include <boost/asio.hpp>
+#include <memory>
+#include <iostream>
+#include <unordered_map>
+#include "Singleton.h"
+
+namespace beast = boost::beast;         // from <boost/beast.hpp>
+namespace http = beast::http;           // from <boost/beast/http.hpp>
+namespace net = boost::asio;            // from <boost/asio.hpp>
+using tcp = boost::asio::ip::tcp;       // from <boost/asio/ip/tcp.hpp>
+
+

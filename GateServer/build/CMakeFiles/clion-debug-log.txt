@@ -1,0 +1,4 @@
+无法生成至 C:\Users\myheng\Desktop\myChat\GateServer\build
+此目录已经用于 'release' 配置文件
+
+请手动删除或选择其他生成目录
