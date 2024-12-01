@@ -2,7 +2,19 @@
 	"entries" : 
 	[
 		{
-			"name" : "BOOST_SYSTEM_LIBRARIE",
+			"name" : "BOOST_FILESYSTEM_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "D:/cppsoft/boost_1_84/lib/libboost_filesystem-mgw11-mt-d-x64-1_84.a"
+		},
+		{
+			"name" : "BOOST_SYSTEM_LIBRARY",
 			"properties" : 
 			[
 				{
@@ -14,7 +26,7 @@
 			"value" : "D:/cppsoft/boost_1_84/lib/libboost_system-mgw11-mt-d-x64-1_84.a"
 		},
 		{
-			"name" : "BOOST_THREAD_LIBRARIE",
+			"name" : "BOOST_THREAD_LIBRARY",
 			"properties" : 
 			[
 				{
@@ -67,7 +79,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "Release"
+			"value" : "Debug"
 		},
 		{
 			"name" : "CMAKE_CACHEFILE_DIR",
@@ -175,11 +187,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "CXX compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
-			"value" : "D:/ide/CLion 2024.2/bin/mingw/bin/g++.exe"
+			"type" : "UNINITIALIZED",
+			"value" : "g++.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_AR",

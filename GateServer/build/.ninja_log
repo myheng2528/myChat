@@ -1,6 +1,10 @@
 # ninja log v6
-170	11231	7545987297959558	CMakeFiles/GateServer.dir/LogicSystem.cpp.obj	2be2aa28c5386fb0
-3	12999	7545987296281502	CMakeFiles/GateServer.dir/GateServer.cpp.obj	49715736ffd2ba6a
-33	13322	7545987296590482	CMakeFiles/GateServer.dir/CServer.cpp.obj	132b4cf8efa057dd
-71	20561	7545987296959495	CMakeFiles/GateServer.dir/HttpConnection.cpp.obj	666c56fb7e4aa9b4
-20561	20951	7545987501863937	GateServer.exe	4c7b1fcffde2db49
+365	5548	7547342017410202	CMakeFiles/GateServer.dir/message.pb.cc.obj	471f2aa13755dfed
+13049	30398	7547342144245122	CMakeFiles/GateServer.dir/ConfigMgr.cpp.obj	aab6c99305382af2
+254	13035	7547342016287389	CMakeFiles/GateServer.dir/message.grpc.pb.cc.obj	fd6e5c2474352223
+3	23442	7547342013788778	CMakeFiles/GateServer.dir/GateServer.cpp.obj	8f6cd601f288eba2
+40	23754	7547342014147805	CMakeFiles/GateServer.dir/CServer.cpp.obj	7916aeac2c64d8d6
+154	26318	7547342015287626	CMakeFiles/GateServer.dir/LogicSystem.cpp.obj	264775891d56bdf2
+5556	27863	7547342069310076	CMakeFiles/GateServer.dir/VarifyGrpcClient.cpp.obj	d0002d7f283f0114
+86	30962	7547342014609459	CMakeFiles/GateServer.dir/HttpConnection.cpp.obj	86528cd423039058
+30962	62888	7547342323380194	GateServer.exe	6258b8af213e1275

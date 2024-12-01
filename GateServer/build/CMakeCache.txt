@@ -15,10 +15,13 @@
 ########################
 
 //Path to a library.
-BOOST_SYSTEM_LIBRARIE:FILEPATH=D:/cppsoft/boost_1_84/lib/libboost_system-mgw11-mt-d-x64-1_84.a
+BOOST_FILESYSTEM_LIBRARY:FILEPATH=D:/cppsoft/boost_1_84/lib/libboost_filesystem-mgw11-mt-d-x64-1_84.a
 
 //Path to a library.
-BOOST_THREAD_LIBRARIE:FILEPATH=D:/cppsoft/boost_1_84/lib/libboost_thread-mgw11-mt-d-x64-1_84.a
+BOOST_SYSTEM_LIBRARY:FILEPATH=D:/cppsoft/boost_1_84/lib/libboost_system-mgw11-mt-d-x64-1_84.a
+
+//Path to a library.
+BOOST_THREAD_LIBRARY:FILEPATH=D:/cppsoft/boost_1_84/lib/libboost_thread-mgw11-mt-d-x64-1_84.a
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=D:/ide/CLion 2024.2/bin/mingw/bin/addr2line.exe
@@ -28,13 +31,13 @@ CMAKE_AR:FILEPATH=D:/ide/CLion 2024.2/bin/mingw/bin/ar.exe
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=Release
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable colored diagnostics throughout.
 CMAKE_COLOR_DIAGNOSTICS:BOOL=ON
 
-//CXX compiler
-CMAKE_CXX_COMPILER:STRING=D:/ide/CLion 2024.2/bin/mingw/bin/g++.exe
+//No help, variable specified on the command line.
+CMAKE_CXX_COMPILER:UNINITIALIZED=g++.exe
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler

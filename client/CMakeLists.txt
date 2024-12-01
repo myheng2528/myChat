@@ -9,6 +9,12 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+
+# Add this at the appropriate place in your CMakeLists.txt
+configure_file(${CMAKE_SOURCE_DIR}/config.ini ${CMAKE_BINARY_DIR}/config.ini COPYONLY)
+
+
+
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Network)
 
@@ -30,6 +36,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         global.cpp
         singleton.h
         httpmgr.h httpmgr.cpp
+        config.ini
 
 
     )
@@ -77,3 +84,5 @@ install(TARGETS client
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(client)
 endif()
+
+

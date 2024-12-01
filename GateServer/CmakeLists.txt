@@ -5,7 +5,7 @@ project(GateServer LANGUAGES CXX)
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -v")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--trace-symbol=_missing_symbol")
 # 设置 C++ 标准
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # 手动设置库路径
@@ -13,6 +13,13 @@ set(BOOST_ROOT "D:/cppsoft/boost_1_84")
 set(JSONCPP_DIR "D:/cppsoft/jsoncpp")
 set(BOOST_INCLUDE_DIR "${BOOST_ROOT}/include/boost-1_84")
 set(BOOST_LIBRARY_DIR "${BOOST_ROOT}/lib")
+
+# 指定 gRPC 安装路径
+set(GRPC_INSTALL_PATH "D:/cppsoft/grpc")
+set(GRPC_INCLUDE_PATH "${GRPC_INSTALL_PATH}/include")
+set(GRPC_LIB_PATH "${GRPC_INSTALL_PATH}/lib")
+
+
 
 # set(CMAKE_LIBRARY_PATH "${CMAKE_LIBRARY_PATH};D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib")
 # 查找 Boost
@@ -22,24 +29,31 @@ set(BOOST_LIBRARY_DIR "${BOOST_ROOT}/lib")
 #if (NOT EXISTS "${JSONCPP_DIR}/include/json/json.h")
 #  message(FATAL_ERROR "JsonCpp headers not found in ${JSONCPP_DIR}/include.")
 #endif()
-
+# Add this at the appropriate place in your CMakeLists.txt
+configure_file(${CMAKE_SOURCE_DIR}/config.ini ${CMAKE_BINARY_DIR}/config.ini COPYONLY)
 # 手动设置 JsonCpp 库路径并查找
 find_library(JSONCPP_LIBRARY NAMES jsoncpp_static libjsoncpp_static HINTS "${JSONCPP_DIR}/lib")
-find_library(BOOST_SYSTEM_LIBRARIE
+find_library(BOOST_SYSTEM_LIBRARY
         NAMES libboost_system-mgw11-mt-d-x64-1_84.a
         HINTS ${BOOST_LIBRARY_DIR}
 )
-find_library(BOOST_THREAD_LIBRARIE
+find_library(BOOST_THREAD_LIBRARY
         NAMES libboost_thread-mgw11-mt-d-x64-1_84.a
         HINTS ${BOOST_LIBRARY_DIR}
 )
 
-file(GLOB ALL_LIBS "D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib/*.a")
+find_library(BOOST_FILESYSTEM_LIBRARY
+        NAMES libboost_filesystem-mgw11-mt-d-x64-1_84.a
+        HINTS ${BOOST_LIBRARY_DIR}
+)
 
-foreach(LIB_PATH ${ALL_LIBS})
-    message(STATUS "Found library: ${LIB_PATH}")
-    list(APPEND LIBS_TO_LINK ${LIB_PATH})
-endforeach()
+
+#file(GLOB ALL_LIBS "D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib/*.a")
+#
+#foreach(LIB_PATH ${ALL_LIBS})
+#    message(STATUS "Found library: ${LIB_PATH}")
+#    list(APPEND LIBS_TO_LINK ${LIB_PATH})
+#endforeach()
 
 #if (NOT JSONCPP_LIBRARY)
 #  message(FATAL_ERROR "JsonCpp library not found in ${JSONCPP_DIR}/lib.")
@@ -48,26 +62,76 @@ endforeach()
 #endif()
 
 # 添加可执行文件
-add_executable(GateServer "GateServer.cpp"  "CServer.h" "CServer.cpp"  "const.h" "HttpConnection.h" "HttpConnection.cpp" "Singleton.h" "LogicSystem.h" "LogicSystem.cpp")
 # add_executable(GateServer "CmakeProject1.cpp" "CmakeProject1.h")
-
+add_executable(GateServer "GateServer.cpp"  "CServer.h" "CServer.cpp"  "const.h" "HttpConnection.h" "HttpConnection.cpp" "Singleton.h" "LogicSystem.h" "LogicSystem.cpp"
+        message.grpc.pb.cc
+        message.grpc.pb.h
+        message.pb.cc
+        message.pb.h
+        VarifyGrpcClient.cpp
+        VarifyGrpcClient.h
+        ConfigMgr.cpp
+        ConfigMgr.h)
 # 添加头文件路径和库路径
-target_include_directories(GateServer PRIVATE ${BOOST_INCLUDE_DIR} ${JSONCPP_DIR}/include)
+target_include_directories(GateServer PRIVATE ${BOOST_INCLUDE_DIR} ${JSONCPP_DIR}/include ${GRPC_INCLUDE_PATH})
+#link_directories(${GRPC_LIB_PATH})
+
+
+
 
 # 链接库
 # target_link_libraries(GateServer PRIVATE ${BOOST_SYSTEM_LIBRARIE} ${BOOST_THREAD_LIBRARIE} ${JSONCPP_LIBRARY} D:\Qt\Tools\mingw1120_64\x86_64-w64-mingw32\lib\libws2_32.a)
 # "D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib/libws2_32.a"
 target_link_libraries(GateServer PRIVATE
-        ${BOOST_SYSTEM_LIBRARIES}
-        ${BOOST_THREAD_LIBRARIES}
+        ${BOOST_SYSTEM_LIBRARY}
+        ${BOOST_THREAD_LIBRARY}
+        ${BOOST_FILESYSTEM_LIBRARY}
         ${JSONCPP_LIBRARY}
+        "${GRPC_LIB_PATH}/libgrpc++.a"
+        "${GRPC_LIB_PATH}/libgrpc.a"
+        "${GRPC_LIB_PATH}/libprotobuf.a"
+        "${GRPC_LIB_PATH}/libssl.a"
+        "${GRPC_LIB_PATH}/libzlib.dll.a"
+        "${GRPC_LIB_PATH}/libcares.a"
+        "${GRPC_LIB_PATH}/libgpr.a"
+        "${GRPC_LIB_PATH}/libre2.a"
+        "${GRPC_LIB_PATH}/libupb.a"
+        "${GRPC_LIB_PATH}/libaddress_sorting.a"
+        "${GRPC_LIB_PATH}/libabsl_hash.a"
+        "${GRPC_LIB_PATH}/libabsl_status.a"
+        "${GRPC_LIB_PATH}/libabsl_strings.a"
+        "${GRPC_LIB_PATH}/libabsl_strings_internal.a"
+        "${GRPC_LIB_PATH}/libabsl_str_format_internal.a"
+        "${GRPC_LIB_PATH}/libabsl_synchronization.a"
+        "${GRPC_LIB_PATH}/libabsl_symbolize.a"
+        "${GRPC_LIB_PATH}/libabsl_time.a"
+        "${GRPC_LIB_PATH}/libabsl_time_zone.a"
+        "${GRPC_LIB_PATH}/libabsl_base.a"
+        "${GRPC_LIB_PATH}/libabsl_malloc_internal.a"
+        "${GRPC_LIB_PATH}/libabsl_graphcycles_internal.a"
+        "${GRPC_LIB_PATH}/libabsl_cord.a"
+        "${GRPC_LIB_PATH}/libabsl_exponential_biased.a"
+        "${GRPC_LIB_PATH}/libabsl_bad_optional_access.a"
+        "${GRPC_LIB_PATH}/libabsl_bad_variant_access.a"
+        "${GRPC_LIB_PATH}/libabsl_raw_hash_set.a"
+        "${GRPC_LIB_PATH}/libabsl_raw_logging_internal.a"
+        "${GRPC_LIB_PATH}/libabsl_stacktrace.a"
+        "${GRPC_LIB_PATH}/libabsl_spinlock_wait.a"
+        "${GRPC_LIB_PATH}/libabsl_city.a"
+        "${GRPC_LIB_PATH}/libabsl_throw_delegate.a"
+        "${GRPC_LIB_PATH}/libabsl_int128.a"
+        "${GRPC_LIB_PATH}/libcrypto.a"
+        #${GRPC_LIBRARIES}
+        #bcrypt
+        #dbghelp
+        #ws2_32
         "D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib/libws2_32.a"
         "D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib/libwsock32.a"
         "D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib/libmswsock.a"
-
+        "D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib/libimagehlp.a"
 )
 
 
-set_target_properties(GateServer PROPERTIES
-        INSTALL_RPATH "${JSONCPP_DIR}/lib"
-)
+#set_target_properties(GateServer PROPERTIES
+#        INSTALL_RPATH "${JSONCPP_DIR}/lib"
+#)

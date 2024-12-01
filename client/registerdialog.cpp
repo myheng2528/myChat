@@ -12,6 +12,7 @@ RegisterDialog::RegisterDialog(QWidget *parent)
     ui->err_tip->setProperty("state","normal");
     repolish(ui->err_tip);
     connect(HttpMgr::GetInstance().get(), &HttpMgr::sig_reg_mod_finish, this, &RegisterDialog::slot_reg_mod_finish);
+    initHttpHandlers();
 }
 
 RegisterDialog::~RegisterDialog()
@@ -23,10 +24,14 @@ void RegisterDialog::on_get_btn_clicked()
 {
     QString email = ui->emil_Edit->text();
     //QRegularExpression regex(R"((\w+)(\.|_)?(\w*)@(\w+)(\.(\w+))+)");
-    QRegularExpression regex(R"((\\w+)@(\\w+)\\.([a-zA-Z]{2,}))");
+    QRegularExpression regex(R"((\w+)@(\w+)\.([a-zA-Z]{2,}))");
     bool match = regex.match(email).hasMatch();
     if(match){
         //发送http验证码；
+        QJsonObject json_obj;
+        json_obj["email"] = email;
+        HttpMgr::GetInstance()->PostHttpReq(QUrl(gate_url_prefix+"/get_varifycode"),
+                                            json_obj, ReqId::ID_GET_VARIFY_CODE,Modules::REGISTERMOD);
 
     }else{
         showTip(tr("验证码不正确"),false);

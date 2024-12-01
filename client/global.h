@@ -18,7 +18,7 @@ void repolish(QWidget *w);
  */
 
 extern std::function<QString(QString)> xorString;
-
+extern QString gate_url_prefix;
 enum ReqId{
     ID_GET_VARIFY_CODE = 1001, //获取验证码
     ID_REG_USER = 1002, //注册用户

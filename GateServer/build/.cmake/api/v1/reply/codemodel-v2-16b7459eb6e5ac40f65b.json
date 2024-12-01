@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.8"
@@ -19,7 +19,7 @@
 					]
 				}
 			],
-			"name" : "Release",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "GateServer::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-GateServer-Release-45bc12615bafed0f7e14.json",
+					"jsonFile" : "target-GateServer-Debug-0ebdfc0a49fbd6135d80.json",
 					"name" : "GateServer",
 					"projectIndex" : 0
 				}

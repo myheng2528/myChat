@@ -1,7 +1,21 @@
 C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/myheng/Desktop/myChat/client/mainwindow.h \
   C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/moc_predefs.h \
+  C:/Users/myheng/Desktop/myChat/client/global.h \
   C:/Users/myheng/Desktop/myChat/client/logindialog.h \
   C:/Users/myheng/Desktop/myChat/client/registerdialog.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/QDir \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/QFlags \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/QIODevice \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/QJsonDocument \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/QJsonObject \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/QList \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/QMetaType \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/QObject \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/QSettings \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/QSharedDataPointer \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/QString \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/QUrl \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/QVariant \
   D:/Qt/6.6.3/mingw_64/include/QtCore/q20functional.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/q20memory.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/q20type_traits.h \
@@ -20,6 +34,9 @@ C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/moc_
   D:/Qt/6.6.3/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qbytearraylist.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qbytearrayview.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qcalendar.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qcborcommon.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qcborvalue.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qchar.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qcompare.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qcompare_impl.h \
@@ -30,10 +47,17 @@ C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/moc_
   D:/Qt/6.6.3/mingw_64/include/QtCore/qcontainerinfo.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qcontainertools_impl.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qcontiguouscache.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qcryptographichash.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qdarwinhelpers.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qdatastream.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qdatetime.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qdebug.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qdir.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qendian.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qexceptionhandling.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qfile.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qfiledevice.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qfileinfo.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qflags.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qfloat16.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qforeach.h \
@@ -44,12 +68,17 @@ C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/moc_
   D:/Qt/6.6.3/mingw_64/include/QtCore/qglobalstatic.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qhash.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qhashfunctions.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qiodevice.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qiodevicebase.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qiterable.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qiterator.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qjsondocument.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qjsonobject.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qjsonvalue.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qlatin1stringview.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qline.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qlist.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qlocale.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qlogging.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qmalloc.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qmap.h \
@@ -70,9 +99,11 @@ C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/moc_
   D:/Qt/6.6.3/mingw_64/include/QtCore/qprocessordetection.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qrect.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qrefcount.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qregularexpression.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qscopedpointer.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qscopeguard.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qset.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qsettings.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qshareddata.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qshareddata_impl.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qsharedpointer.h \
@@ -100,6 +131,7 @@ C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/moc_
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtdeprecationmarkers.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtenvironmentvariables.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtextstream.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qtimezone.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtmetamacros.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtnoop.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtpreprocessorsupport.h \
@@ -110,7 +142,9 @@ C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/moc_
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtversionchecks.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtypeinfo.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtypes.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qurl.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qutf8stringview.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/quuid.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qvariant.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qvarlengtharray.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qversiontagging.h \
@@ -140,11 +174,34 @@ C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/moc_
   D:/Qt/6.6.3/mingw_64/include/QtGui/qtransform.h \
   D:/Qt/6.6.3/mingw_64/include/QtGui/qwindowdefs.h \
   D:/Qt/6.6.3/mingw_64/include/QtGui/qwindowdefs_win.h \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/QNetworkAccessManager \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/QNetworkReply \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/QNetworkRequest \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/QSslConfiguration \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/qabstractsocket.h \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/qhostaddress.h \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/qnetworkreply.h \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/qnetworkrequest.h \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/qssl.h \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/qsslcertificate.h \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/qsslconfiguration.h \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/qsslerror.h \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/qsslsocket.h \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/qtcpsocket.h \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/qtnetwork-config.h \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/qtnetworkexports.h \
+  D:/Qt/6.6.3/mingw_64/include/QtNetwork/qtnetworkglobal.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/QDialog \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/QMainWindow \
+  D:/Qt/6.6.3/mingw_64/include/QtWidgets/QStyle \
+  D:/Qt/6.6.3/mingw_64/include/QtWidgets/QWidget \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qdialog.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qmainwindow.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qsizepolicy.h \
+  D:/Qt/6.6.3/mingw_64/include/QtWidgets/qstyle.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qtabwidget.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qtwidgets-config.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qtwidgetsexports.h \
@@ -173,7 +230,6 @@ C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/moc_
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/cpp_type_traits.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/cxxabi_forced.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/cxxabi_init_exception.h \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/enable_special_members.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/exception.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/exception_defines.h \
@@ -181,8 +237,6 @@ C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/moc_
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/functexcept.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/functional_hash.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hash_bytes.h \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hashtable.h \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hashtable_policy.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/invoke.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ios_base.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/list.tcc \
@@ -192,7 +246,6 @@ C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/moc_
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/memoryfwd.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/move.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/nested_exception.h \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/node_handle.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ostream_insert.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/parse_numbers.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/postypes.h \
@@ -203,7 +256,6 @@ C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/moc_
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/shared_ptr.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/shared_ptr_atomic.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/shared_ptr_base.h \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/specfun.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_abs.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_function.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_algo.h \
@@ -229,11 +281,9 @@ C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/moc_
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stream_iterator.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/streambuf.tcc \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/streambuf_iterator.h \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/string_view.tcc \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stringfwd.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/uniform_int_dist.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unique_ptr.h \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unordered_map.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/uses_allocator.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/vector.tcc \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cctype \
@@ -260,6 +310,7 @@ C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/moc_
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/numeric_traits.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/string_conversions.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/type_traits.h \
+  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/filesystem \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/functional \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/initializer_list \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iosfwd \
@@ -271,10 +322,6 @@ C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/moc_
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/new \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/numeric \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/optional \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/execution_defs.h \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/glue_algorithm_defs.h \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/glue_memory_defs.h \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/glue_numeric_defs.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/stdexcept \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/stdlib.h \
@@ -282,22 +329,9 @@ C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/EWIEGA46WW/moc_
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/string \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/string_view \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/system_error \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/bessel_function.tcc \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/beta_function.tcc \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/ell_integral.tcc \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/exp_integral.tcc \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/gamma.tcc \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/hypergeometric.tcc \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/legendre_function.tcc \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/modified_bessel_func.tcc \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/poly_hermite.tcc \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/poly_laguerre.tcc \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/riemann_zeta.tcc \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/special_function_util.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tuple \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/type_traits \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/typeinfo \
-  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/unordered_map \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/utility \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/variant \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector \
