@@ -9,8 +9,8 @@ std::string UrlEncode(const std::string& str);
 unsigned char ToHex(unsigned char x);
 unsigned char FromHex(unsigned char x);
 
-HttpConnection::HttpConnection(tcp::socket socket)
-        : _socket(std::move(socket)) {
+HttpConnection::HttpConnection(boost::asio::io_context& ioc)
+        :_socket(ioc) {
 }
 void HttpConnection::Start()
 {

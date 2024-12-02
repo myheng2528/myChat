@@ -71,7 +71,9 @@ add_executable(GateServer "GateServer.cpp"  "CServer.h" "CServer.cpp"  "const.h"
         VarifyGrpcClient.cpp
         VarifyGrpcClient.h
         ConfigMgr.cpp
-        ConfigMgr.h)
+        ConfigMgr.h
+        AsioIOServicePool.cpp
+        AsioIOServicePool.h)
 # 添加头文件路径和库路径
 target_include_directories(GateServer PRIVATE ${BOOST_INCLUDE_DIR} ${JSONCPP_DIR}/include ${GRPC_INCLUDE_PATH})
 #link_directories(${GRPC_LIB_PATH})
