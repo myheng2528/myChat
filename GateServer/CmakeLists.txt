@@ -19,7 +19,10 @@ set(GRPC_INSTALL_PATH "D:/cppsoft/grpc")
 set(GRPC_INCLUDE_PATH "${GRPC_INSTALL_PATH}/include")
 set(GRPC_LIB_PATH "${GRPC_INSTALL_PATH}/lib")
 
-
+# 指定 hiredis 安装路径
+set(HIREDIS_INSTALL_PATH "D:/cppsoft/hiredis")
+set(HIREDIS_INCLUDE_PATH "${HIREDIS_INSTALL_PATH}/include")
+set(HIREDIS_LIB_PATH "${HIREDIS_INSTALL_PATH}/lib")
 
 # set(CMAKE_LIBRARY_PATH "${CMAKE_LIBRARY_PATH};D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib")
 # 查找 Boost
@@ -47,6 +50,10 @@ find_library(BOOST_FILESYSTEM_LIBRARY
         HINTS ${BOOST_LIBRARY_DIR}
 )
 
+find_library(HIREDIS_LIBRARY
+        NAMES libhiredis.dll.a
+        HINTS ${HIREDIS_LIB_PATH}
+)
 
 #file(GLOB ALL_LIBS "D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib/*.a")
 #
@@ -73,9 +80,11 @@ add_executable(GateServer "GateServer.cpp"  "CServer.h" "CServer.cpp"  "const.h"
         ConfigMgr.cpp
         ConfigMgr.h
         AsioIOServicePool.cpp
-        AsioIOServicePool.h)
+        AsioIOServicePool.h
+        RedisMgr.cpp
+        RedisMgr.h)
 # 添加头文件路径和库路径
-target_include_directories(GateServer PRIVATE ${BOOST_INCLUDE_DIR} ${JSONCPP_DIR}/include ${GRPC_INCLUDE_PATH})
+target_include_directories(GateServer PRIVATE ${BOOST_INCLUDE_DIR} ${JSONCPP_DIR}/include ${GRPC_INCLUDE_PATH} ${HIREDIS_INCLUDE_PATH})
 #link_directories(${GRPC_LIB_PATH})
 
 
@@ -89,6 +98,7 @@ target_link_libraries(GateServer PRIVATE
         ${BOOST_THREAD_LIBRARY}
         ${BOOST_FILESYSTEM_LIBRARY}
         ${JSONCPP_LIBRARY}
+        ${HIREDIS_LIBRARY}
         "${GRPC_LIB_PATH}/libgrpc++.a"
         "${GRPC_LIB_PATH}/libgrpc.a"
         "${GRPC_LIB_PATH}/libprotobuf.a"

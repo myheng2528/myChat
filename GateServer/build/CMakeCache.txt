@@ -235,6 +235,9 @@ GateServer_IS_TOP_LEVEL:STATIC=ON
 GateServer_SOURCE_DIR:STATIC=C:/Users/myheng/Desktop/myChat/GateServer
 
 //Path to a library.
+HIREDIS_LIBRARY:FILEPATH=D:/cppsoft/hiredis/lib/libhiredis.dll.a
+
+//Path to a library.
 JSONCPP_LIBRARY:FILEPATH=D:/cppsoft/jsoncpp/lib/libjsoncpp_static.a
 
 
