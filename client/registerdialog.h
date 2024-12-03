@@ -26,6 +26,7 @@ private:
     void initHttpHandlers();
 private slots:
     void slot_reg_mod_finish(ReqId id, QString res, ErrorCodes err);
+    void on_sure_btn_clicked();
 };
 
 #endif // REGISTERDIALOG_H
