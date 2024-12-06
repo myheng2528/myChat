@@ -1,0 +1,12 @@
+C:\Users\myheng\Desktop\myChat\GateServer\GateServer.cpp;C:\Users\myheng\Desktop\myChat\GateServer\cmake-build-debug-visual-studio\GateServer.dir\Debug\GateServer.obj
+C:\Users\myheng\Desktop\myChat\GateServer\CServer.cpp;C:\Users\myheng\Desktop\myChat\GateServer\cmake-build-debug-visual-studio\GateServer.dir\Debug\CServer.obj
+C:\Users\myheng\Desktop\myChat\GateServer\HttpConnection.cpp;C:\Users\myheng\Desktop\myChat\GateServer\cmake-build-debug-visual-studio\GateServer.dir\Debug\HttpConnection.obj
+C:\Users\myheng\Desktop\myChat\GateServer\LogicSystem.cpp;C:\Users\myheng\Desktop\myChat\GateServer\cmake-build-debug-visual-studio\GateServer.dir\Debug\LogicSystem.obj
+C:\Users\myheng\Desktop\myChat\GateServer\message.grpc.pb.cc;C:\Users\myheng\Desktop\myChat\GateServer\cmake-build-debug-visual-studio\GateServer.dir\Debug\message.grpc.pb.obj
+C:\Users\myheng\Desktop\myChat\GateServer\message.pb.cc;C:\Users\myheng\Desktop\myChat\GateServer\cmake-build-debug-visual-studio\GateServer.dir\Debug\message.pb.obj
+C:\Users\myheng\Desktop\myChat\GateServer\VarifyGrpcClient.cpp;C:\Users\myheng\Desktop\myChat\GateServer\cmake-build-debug-visual-studio\GateServer.dir\Debug\VarifyGrpcClient.obj
+C:\Users\myheng\Desktop\myChat\GateServer\ConfigMgr.cpp;C:\Users\myheng\Desktop\myChat\GateServer\cmake-build-debug-visual-studio\GateServer.dir\Debug\ConfigMgr.obj
+C:\Users\myheng\Desktop\myChat\GateServer\AsioIOServicePool.cpp;C:\Users\myheng\Desktop\myChat\GateServer\cmake-build-debug-visual-studio\GateServer.dir\Debug\AsioIOServicePool.obj
+C:\Users\myheng\Desktop\myChat\GateServer\RedisMgr.cpp;C:\Users\myheng\Desktop\myChat\GateServer\cmake-build-debug-visual-studio\GateServer.dir\Debug\RedisMgr.obj
+C:\Users\myheng\Desktop\myChat\GateServer\MysqlDao.cpp;C:\Users\myheng\Desktop\myChat\GateServer\cmake-build-debug-visual-studio\GateServer.dir\Debug\MysqlDao.obj
+C:\Users\myheng\Desktop\myChat\GateServer\MysqlMgr.cpp;C:\Users\myheng\Desktop\myChat\GateServer\cmake-build-debug-visual-studio\GateServer.dir\Debug\MysqlMgr.obj

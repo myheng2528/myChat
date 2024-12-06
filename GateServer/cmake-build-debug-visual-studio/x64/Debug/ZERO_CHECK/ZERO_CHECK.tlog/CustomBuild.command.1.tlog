@@ -1,0 +1,10 @@
+^C:\USERS\MYHENG\DESKTOP\MYCHAT\GATESERVER\CMAKE-BUILD-DEBUG-VISUAL-STUDIO\CMAKEFILES\FAF305913A00AF6CE912C4255A71C044\GENERATE.STAMP.RULE
+setlocal
+"D:\ide\CLion 2024.2\bin\cmake\win\x64\bin\cmake.exe" -SC:/Users/myheng/Desktop/myChat/GateServer -BC:/Users/myheng/Desktop/myChat/GateServer/cmake-build-debug-visual-studio --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/myheng/Desktop/myChat/GateServer/cmake-build-debug-visual-studio/GateServer.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -11,6 +11,8 @@ RegisterDialog::RegisterDialog(QWidget *parent)
     ui->setupUi(this);
     ui->err_tip->setProperty("state","normal");
     repolish(ui->err_tip);
+    ui->pass_Edit->setEchoMode(QLineEdit::Password);
+    ui->pass2_lineEdit->setEchoMode(QLineEdit::Password);
     connect(HttpMgr::GetInstance().get(), &HttpMgr::sig_reg_mod_finish, this, &RegisterDialog::slot_reg_mod_finish);
     initHttpHandlers();
 }
@@ -76,6 +78,7 @@ void RegisterDialog::initHttpHandlers()
         auto email = jsonObj["email"].toString();
         showTip(tr("用户注册成功"), true);
         qDebug()<< "email is " << email ;
+        qDebug()<< "user uuid is " <<  jsonObj["uid"].toString();
     });
 
 

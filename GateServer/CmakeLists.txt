@@ -2,74 +2,94 @@ cmake_minimum_required(VERSION 3.8)
 
 # 项目信息
 project(GateServer LANGUAGES CXX)
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -v")
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--trace-symbol=_missing_symbol")
+#set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -v")
+#set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--trace-symbol=_missing_symbol")
 # 设置 C++ 标准
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# 1. 获取源目录中所有 .ini 和 .dll 文件
+file(GLOB ini_files "${CMAKE_SOURCE_DIR}/*.ini")
+file(GLOB dll_files "${CMAKE_SOURCE_DIR}/*.dll")
+
+# 2. 复制 .ini 文件到构建目录（不带路径）
+foreach(file ${ini_files})
+    # 提取文件名
+    get_filename_component(filename ${file} NAME)
+    configure_file(${file} ${CMAKE_BINARY_DIR}/debug/${filename} COPYONLY)
+endforeach()
+
+# 3. 复制 .dll 文件到构建目录（不带路径）
+foreach(file ${dll_files})
+    # 提取文件名
+    get_filename_component(filename ${file} NAME)
+    configure_file(${file} ${CMAKE_BINARY_DIR}/debug/${filename} COPYONLY)
+endforeach()
 # 手动设置库路径
-set(BOOST_ROOT "D:/cppsoft/boost_1_84")
-set(JSONCPP_DIR "D:/cppsoft/jsoncpp")
-set(BOOST_INCLUDE_DIR "${BOOST_ROOT}/include/boost-1_84")
+set(BOOST_ROOT "D:/cppsoft/boost_1_86_0")
+set(BOOST_INCLUDE_DIR "${BOOST_ROOT}/include")
 set(BOOST_LIBRARY_DIR "${BOOST_ROOT}/lib")
+
+set(JSONCPP_DIR "D:/cppsoft/jsoncpp")
+set(JSONCPP_INCLUDE_DIR "${JSONCPP_DIR}/include")
+set(JSONCPP_LIBRARY_DIR "${JSONCPP_DIR}/lib/Debug")
 
 # 指定 gRPC 安装路径
 set(GRPC_INSTALL_PATH "D:/cppsoft/grpc")
 set(GRPC_INCLUDE_PATH "${GRPC_INSTALL_PATH}/include")
-set(GRPC_LIB_PATH "${GRPC_INSTALL_PATH}/lib")
+set(GRPC_LIB_PATH "${GRPC_INSTALL_PATH}/lib/Debug")
 
 # 指定 hiredis 安装路径
 set(HIREDIS_INSTALL_PATH "D:/cppsoft/hiredis")
 set(HIREDIS_INCLUDE_PATH "${HIREDIS_INSTALL_PATH}/include")
 set(HIREDIS_LIB_PATH "${HIREDIS_INSTALL_PATH}/lib")
 
-# set(CMAKE_LIBRARY_PATH "${CMAKE_LIBRARY_PATH};D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib")
-# 查找 Boost
+# 指定 mysql-connector 头文件
+
+set(MYSQL_INSTALL_PATH "D:/cppsoft/mysql-connector")
+set(MYSQL_INCLUDE_PATH "${MYSQL_INSTALL_PATH}/include")
+set(MYSQL_LIB_PATH "${MYSQL_INSTALL_PATH}/lib64/vs14/debug")
 
 
-# 查找 JsonCpp 库
-#if (NOT EXISTS "${JSONCPP_DIR}/include/json/json.h")
-#  message(FATAL_ERROR "JsonCpp headers not found in ${JSONCPP_DIR}/include.")
-#endif()
-# Add this at the appropriate place in your CMakeLists.txt
-configure_file(${CMAKE_SOURCE_DIR}/config.ini ${CMAKE_BINARY_DIR}/config.ini COPYONLY)
-# 手动设置 JsonCpp 库路径并查找
-find_library(JSONCPP_LIBRARY NAMES jsoncpp_static libjsoncpp_static HINTS "${JSONCPP_DIR}/lib")
-find_library(BOOST_SYSTEM_LIBRARY
-        NAMES libboost_system-mgw11-mt-d-x64-1_84.a
-        HINTS ${BOOST_LIBRARY_DIR}
-)
-find_library(BOOST_THREAD_LIBRARY
-        NAMES libboost_thread-mgw11-mt-d-x64-1_84.a
-        HINTS ${BOOST_LIBRARY_DIR}
+# 设置头文件目录
+include_directories(${BOOST_INCLUDE_DIR}
+        ${JSONCPP_INCLUDE_DIR}
+        ${HIREDIS_INCLUDE_PATH}
+        ${MYSQL_INCLUDE_PATH}
+        D:/cppsoft/grpc/third_party/re2
+        D:/cppsoft/grpc/third_party/address_sorting/include
+        D:/cppsoft/grpc/third_party/abseil-cpp
+        D:/cppsoft/grpc/third_party/protobuf/src
+        D:/cppsoft/grpc/include
 )
 
-find_library(BOOST_FILESYSTEM_LIBRARY
-        NAMES libboost_filesystem-mgw11-mt-d-x64-1_84.a
-        HINTS ${BOOST_LIBRARY_DIR}
+# 设置库文件目录
+link_directories(${BOOST_LIBRARY_DIR}
+        ${JSONCPP_LIBRARY_DIR}
+        ${HIREDIS_LIB_PATH}
+        ${MYSQL_LIB_PATH}
+        D:/cppsoft/grpc/visualpro/third_party/re2/Debug
+        D:/cppsoft/grpc/visualpro/third_party/abseil-cpp/absl/types/Debug
+        D:/cppsoft/grpc/visualpro/third_party/abseil-cpp/absl/synchronization/Debug
+        D:/cppsoft/grpc/visualpro/third_party/abseil-cpp/absl/status/Debug
+        D:/cppsoft/grpc/visualpro/third_party/abseil-cpp/absl/random/Debug
+        D:/cppsoft/grpc/visualpro/third_party/abseil-cpp/absl/flags/Debug
+        D:/cppsoft/grpc/visualpro/third_party/abseil-cpp/absl/debugging/Debug
+        D:/cppsoft/grpc/visualpro/third_party/abseil-cpp/absl/container/Debug
+        D:/cppsoft/grpc/visualpro/third_party/abseil-cpp/absl/hash/Debug
+        D:/cppsoft/grpc/visualpro/third_party/boringssl-with-bazel/Debug
+        D:/cppsoft/grpc/visualpro/third_party/abseil-cpp/absl/numeric/Debug
+        D:/cppsoft/grpc/visualpro/third_party/abseil-cpp/absl/time/Debug
+        D:/cppsoft/grpc/visualpro/third_party/abseil-cpp/absl/base/Debug
+        D:/cppsoft/grpc/visualpro/third_party/abseil-cpp/absl/strings/Debug
+        D:/cppsoft/grpc/visualpro/third_party/protobuf/Debug
+        D:/cppsoft/grpc/visualpro/third_party/zlib/Debug
+        D:/cppsoft/grpc/visualpro/Debug
+        D:/cppsoft/grpc/visualpro/third_party/cares/cares/lib/Debug
 )
 
-find_library(HIREDIS_LIBRARY
-        NAMES libhiredis.dll.a
-        HINTS ${HIREDIS_LIB_PATH}
-)
 
-#file(GLOB ALL_LIBS "D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib/*.a")
-#
-#foreach(LIB_PATH ${ALL_LIBS})
-#    message(STATUS "Found library: ${LIB_PATH}")
-#    list(APPEND LIBS_TO_LINK ${LIB_PATH})
-#endforeach()
-
-#if (NOT JSONCPP_LIBRARY)
-#  message(FATAL_ERROR "JsonCpp library not found in ${JSONCPP_DIR}/lib.")
-#else()
-#  message(STATUS "JsonCpp Library: ${JSONCPP_LIBRARY}")
-#endif()
-
-# 添加可执行文件
-# add_executable(GateServer "CmakeProject1.cpp" "CmakeProject1.h")
+# 添加源文件
 add_executable(GateServer "GateServer.cpp"  "CServer.h" "CServer.cpp"  "const.h" "HttpConnection.h" "HttpConnection.cpp" "Singleton.h" "LogicSystem.h" "LogicSystem.cpp"
         message.grpc.pb.cc
         message.grpc.pb.h
@@ -82,68 +102,83 @@ add_executable(GateServer "GateServer.cpp"  "CServer.h" "CServer.cpp"  "const.h"
         AsioIOServicePool.cpp
         AsioIOServicePool.h
         RedisMgr.cpp
-        RedisMgr.h)
-# 添加头文件路径和库路径
-target_include_directories(GateServer PRIVATE ${BOOST_INCLUDE_DIR} ${JSONCPP_DIR}/include ${GRPC_INCLUDE_PATH} ${HIREDIS_INCLUDE_PATH})
-#link_directories(${GRPC_LIB_PATH})
-
-
-
-
-# 链接库
-# target_link_libraries(GateServer PRIVATE ${BOOST_SYSTEM_LIBRARIE} ${BOOST_THREAD_LIBRARIE} ${JSONCPP_LIBRARY} D:\Qt\Tools\mingw1120_64\x86_64-w64-mingw32\lib\libws2_32.a)
-# "D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib/libws2_32.a"
-target_link_libraries(GateServer PRIVATE
-        ${BOOST_SYSTEM_LIBRARY}
-        ${BOOST_THREAD_LIBRARY}
-        ${BOOST_FILESYSTEM_LIBRARY}
-        ${JSONCPP_LIBRARY}
-        ${HIREDIS_LIBRARY}
-        "${GRPC_LIB_PATH}/libgrpc++.a"
-        "${GRPC_LIB_PATH}/libgrpc.a"
-        "${GRPC_LIB_PATH}/libprotobuf.a"
-        "${GRPC_LIB_PATH}/libssl.a"
-        "${GRPC_LIB_PATH}/libzlib.dll.a"
-        "${GRPC_LIB_PATH}/libcares.a"
-        "${GRPC_LIB_PATH}/libgpr.a"
-        "${GRPC_LIB_PATH}/libre2.a"
-        "${GRPC_LIB_PATH}/libupb.a"
-        "${GRPC_LIB_PATH}/libaddress_sorting.a"
-        "${GRPC_LIB_PATH}/libabsl_hash.a"
-        "${GRPC_LIB_PATH}/libabsl_status.a"
-        "${GRPC_LIB_PATH}/libabsl_strings.a"
-        "${GRPC_LIB_PATH}/libabsl_strings_internal.a"
-        "${GRPC_LIB_PATH}/libabsl_str_format_internal.a"
-        "${GRPC_LIB_PATH}/libabsl_synchronization.a"
-        "${GRPC_LIB_PATH}/libabsl_symbolize.a"
-        "${GRPC_LIB_PATH}/libabsl_time.a"
-        "${GRPC_LIB_PATH}/libabsl_time_zone.a"
-        "${GRPC_LIB_PATH}/libabsl_base.a"
-        "${GRPC_LIB_PATH}/libabsl_malloc_internal.a"
-        "${GRPC_LIB_PATH}/libabsl_graphcycles_internal.a"
-        "${GRPC_LIB_PATH}/libabsl_cord.a"
-        "${GRPC_LIB_PATH}/libabsl_exponential_biased.a"
-        "${GRPC_LIB_PATH}/libabsl_bad_optional_access.a"
-        "${GRPC_LIB_PATH}/libabsl_bad_variant_access.a"
-        "${GRPC_LIB_PATH}/libabsl_raw_hash_set.a"
-        "${GRPC_LIB_PATH}/libabsl_raw_logging_internal.a"
-        "${GRPC_LIB_PATH}/libabsl_stacktrace.a"
-        "${GRPC_LIB_PATH}/libabsl_spinlock_wait.a"
-        "${GRPC_LIB_PATH}/libabsl_city.a"
-        "${GRPC_LIB_PATH}/libabsl_throw_delegate.a"
-        "${GRPC_LIB_PATH}/libabsl_int128.a"
-        "${GRPC_LIB_PATH}/libcrypto.a"
-        #${GRPC_LIBRARIES}
-        #bcrypt
-        #dbghelp
-        #ws2_32
-        "D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib/libws2_32.a"
-        "D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib/libwsock32.a"
-        "D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib/libmswsock.a"
-        "D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib/libimagehlp.a"
+        RedisMgr.h
+        MysqlDao.cpp
+        MysqlDao.h
+        MysqlMgr.cpp
+        MysqlMgr.h
 )
 
-
-#set_target_properties(GateServer PROPERTIES
-#        INSTALL_RPATH "${JSONCPP_DIR}/lib"
-#)
+# 链接库
+target_link_libraries(GateServer boost_system-vc143-mt-gd-x64-1_86.lib boost_thread-vc143-mt-gd-x64-1_86.lib boost_filesystem-vc143-mt-gd-x64-1_86.lib
+        jsoncpp.lib hiredisd.lib
+        mysqlcppconn.lib
+        mysqlcppconn8.lib
+        libprotobufd.lib
+        gpr.lib
+        grpc.lib
+        grpc++.lib
+        grpc++_reflection.lib
+        address_sorting.lib
+        ws2_32.lib
+        cares.lib
+        zlibstaticd.lib
+        upb.lib
+        ssl.lib
+        crypto.lib
+        absl_bad_any_cast_impl.lib
+        absl_bad_optional_access.lib
+        absl_bad_variant_access.lib
+        absl_base.lib
+        absl_city.lib
+        absl_civil_time.lib
+        absl_cord.lib
+        absl_debugging_internal.lib
+        absl_demangle_internal.lib
+        absl_examine_stack.lib
+        absl_exponential_biased.lib
+        absl_failure_signal_handler.lib
+        absl_flags.lib
+        absl_flags_config.lib
+        absl_flags_internal.lib
+        absl_flags_marshalling.lib
+        absl_flags_parse.lib
+        absl_flags_program_name.lib
+        absl_flags_usage.lib
+        absl_flags_usage_internal.lib
+        absl_graphcycles_internal.lib
+        absl_hash.lib
+        absl_hashtablez_sampler.lib
+        absl_int128.lib
+        absl_leak_check.lib
+        absl_leak_check_disable.lib
+        absl_log_severity.lib
+        absl_malloc_internal.lib
+        absl_periodic_sampler.lib
+        absl_random_distributions.lib
+        absl_random_internal_distribution_test_util.lib
+        absl_random_internal_pool_urbg.lib
+        absl_random_internal_randen.lib
+        absl_random_internal_randen_hwaes.lib
+        absl_random_internal_randen_hwaes_impl.lib
+        absl_random_internal_randen_slow.lib
+        absl_random_internal_seed_material.lib
+        absl_random_seed_gen_exception.lib
+        absl_random_seed_sequences.lib
+        absl_raw_hash_set.lib
+        absl_raw_logging_internal.lib
+        absl_scoped_set_env.lib
+        absl_spinlock_wait.lib
+        absl_stacktrace.lib
+        absl_status.lib
+        absl_strings.lib
+        absl_strings_internal.lib
+        absl_str_format_internal.lib
+        absl_symbolize.lib
+        absl_synchronization.lib
+        absl_throw_delegate.lib
+        absl_time.lib
+        absl_time_zone.lib
+        absl_statusor.lib
+        re2.lib
+)

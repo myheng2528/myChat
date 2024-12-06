@@ -32,3 +32,11 @@
 9321	32902	7549040997135525	CMakeFiles/client.dir/mainwindow.cpp.obj	4e1b42499bd1be9a
 11000	35452	7549041013921962	CMakeFiles/client.dir/registerdialog.cpp.obj	eec6bb064b9716b5
 35452	45932	7549041258442099	client.exe	338a80186de6572a
+27	507	7549103402583827	client_autogen/timestamp	9ada9080ce2a9136
+27	507	7549103402583827	client_autogen/mocs_compilation.cpp	9ada9080ce2a9136
+27	507	7549103402583827	C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/timestamp	9ada9080ce2a9136
+27	507	7549103402583827	C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/mocs_compilation.cpp	9ada9080ce2a9136
+616	7446	7549103408477480	CMakeFiles/client.dir/logindialog.cpp.obj	b3ef14b3e702662d
+509	8286	7549103407404801	CMakeFiles/client.dir/mainwindow.cpp.obj	4e1b42499bd1be9a
+682	8942	7549103409135723	CMakeFiles/client.dir/registerdialog.cpp.obj	eec6bb064b9716b5
+8942	10120	7549103491732919	client.exe	338a80186de6572a

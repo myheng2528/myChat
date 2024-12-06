@@ -6,6 +6,12 @@
 #include "const.h"
 #include "ConfigMgr.h"
 #include "RedisMgr.h"
+#include <jdbc/mysql_driver.h>
+#include <jdbc/mysql_connection.h>
+#include <jdbc/cppconn/prepared_statement.h>
+#include <jdbc/cppconn/resultset.h>
+#include <jdbc/cppconn/statement.h>
+#include <jdbc/cppconn/exception.h>
 
 
 void TestRedisMgr() {
@@ -28,7 +34,46 @@ void TestRedisMgr() {
     assert(RedisMgr::GetInstance()->LPop("lpushkey2", value)==false);
 }
 
+void testMysql(){
+    try {
+        // 初始化 MySQL Driver
+        sql::mysql::MySQL_Driver *driver = sql::mysql::get_mysql_driver_instance();
 
+        // 连接到 MySQL 数据库
+        std::unique_ptr<sql::Connection> con(driver->connect("tcp://127.0.0.1:3308", "root", "123456"));
+        con->setSchema("test");
+
+        // 创建一个测试表
+        std::unique_ptr<sql::Statement> stmt(con->createStatement());
+        stmt->execute("CREATE TABLE IF NOT EXISTS test_table ("
+                      "id INT AUTO_INCREMENT PRIMARY KEY, "
+                      "name VARCHAR(50), "
+                      "age INT)");
+
+        // 插入测试数据
+        std::unique_ptr<sql::PreparedStatement> pstmt(con->prepareStatement("INSERT INTO test_table (name, age) VALUES (?, ?)"));
+        pstmt->setString(1, "Alice");
+        pstmt->setInt(2, 25);
+        pstmt->execute();
+
+        pstmt->setString(1, "Bob");
+        pstmt->setInt(2, 30);
+        pstmt->execute();
+
+        // 查询数据
+        std::unique_ptr<sql::ResultSet> res(stmt->executeQuery("SELECT * FROM test_table"));
+        while (res->next()) {
+            std::cout << "ID: " << res->getInt("id")
+                 << ", Name: " << res->getString("name")
+                 << ", Age: " << res->getInt("age") << std::endl;
+        }
+
+    } catch (sql::SQLException &e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+        std::cerr << "SQLState: " << e.getSQLState() << std::endl;
+        std::cerr << "Error Code: " << e.getErrorCode() << std::endl;
+    }
+}
 
 
 
@@ -36,6 +81,7 @@ int main()
 {
     //TestRedis();
     //TestRedisMgr();
+    testMysql();
     auto gCfgMgr = ConfigMgr::Inst();
     std::string gate_port_str = gCfgMgr["GateServer"]["Port"];
     unsigned short gate_port = atoi(gate_port_str.c_str());

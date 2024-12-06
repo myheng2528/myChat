@@ -399,7 +399,6 @@ C:/Users/myheng/Desktop/myChat/client/httpmgr.h
  mdp:D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h
-C:/Users/myheng/Desktop/myChat/client/singleton.h
 C:/Users/myheng/Desktop/myChat/client/logindialog.h
  mmc:Q_OBJECT
  mdp:C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/moc_predefs.h
@@ -724,6 +723,7 @@ C:/Users/myheng/Desktop/myChat/client/logindialog.h
  mdp:D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h
  mdp:D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
+C:/Users/myheng/Desktop/myChat/client/singleton.h
 C:/Users/myheng/Desktop/myChat/client/mainwindow.h
  mmc:Q_OBJECT
  mdp:C:/Users/myheng/Desktop/myChat/client/build/debug/client_autogen/moc_predefs.h

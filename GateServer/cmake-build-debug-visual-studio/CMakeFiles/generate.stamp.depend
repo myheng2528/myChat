@@ -1,0 +1,27 @@
+# CMake generation dependency list for this directory.
+C:/Users/myheng/Desktop/myChat/GateServer/CMakeLists.txt
+C:/Users/myheng/Desktop/myChat/GateServer/boost_filesystem-vc143-mt-gd-x64-1_86.dll
+C:/Users/myheng/Desktop/myChat/GateServer/cmake-build-debug-visual-studio/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake
+C:/Users/myheng/Desktop/myChat/GateServer/cmake-build-debug-visual-studio/CMakeFiles/3.30.5/CMakeRCCompiler.cmake
+C:/Users/myheng/Desktop/myChat/GateServer/cmake-build-debug-visual-studio/CMakeFiles/3.30.5/CMakeSystem.cmake
+C:/Users/myheng/Desktop/myChat/GateServer/config.ini
+C:/Users/myheng/Desktop/myChat/GateServer/hiredisd.dll
+C:/Users/myheng/Desktop/myChat/GateServer/jsoncpp.dll
+C:/Users/myheng/Desktop/myChat/GateServer/mysqlcppconn-9-vs14.dll
+C:/Users/myheng/Desktop/myChat/GateServer/mysqlcppconn8-2-vs14.dll
+D:/ide/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake
+D:/ide/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake
+D:/ide/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake
+D:/ide/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake
+D:/ide/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake
+D:/ide/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCInformation.cmake
+D:/ide/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake
+D:/ide/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake
+D:/ide/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+D:/ide/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/MSVC-CXX.cmake
+D:/ide/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/MSVC.cmake
+D:/ide/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake
+D:/ide/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-MSVC-CXX.cmake
+D:/ide/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-MSVC.cmake
+D:/ide/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows.cmake
+D:/ide/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake

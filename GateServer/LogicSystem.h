@@ -7,6 +7,7 @@
 #include <functional>
 #include <map>
 #include "const.h"
+#include "MysqlMgr.h"
 
 class HttpConnection;
 typedef std::function<void(std::shared_ptr<HttpConnection>)> HttpHandler;
