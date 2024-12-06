@@ -26,5 +26,6 @@ private:
     std::shared_ptr<RegisterDialog>  _reg_dlg;
 private slots:
     void SoltSwitchReg();
+    void SlotSwitchLogin();
 };
 #endif // MAINWINDOW_H

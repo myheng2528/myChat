@@ -1,5 +1,6 @@
 C:/Users/myheng/Desktop/myChat/client/build/Desktop_Qt_6_6_3_MSVC2019_64bit-Debug/client_autogen/EWIEGA46WW/moc_registerdialog.cpp: C:/Users/myheng/Desktop/myChat/client/registerdialog.h \
   C:/Users/myheng/Desktop/myChat/client/global.h \
+  C:/Users/myheng/Desktop/myChat/client/timerbtn.h \
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/QDir \
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/QFlags \
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/QIODevice \
@@ -11,6 +12,7 @@ C:/Users/myheng/Desktop/myChat/client/build/Desktop_Qt_6_6_3_MSVC2019_64bit-Debu
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/QSettings \
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/QSharedDataPointer \
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/QString \
+  D:/Qt/6.6.3/msvc2019_64/include/QtCore/QTimer \
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/QUrl \
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/QVariant \
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/q20functional.h \
@@ -26,6 +28,7 @@ C:/Users/myheng/Desktop/myChat/client/build/Desktop_Qt_6_6_3_MSVC2019_64bit-Debu
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/qatomic.h \
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/qatomic_cxx11.h \
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/qbasicatomic.h \
+  D:/Qt/6.6.3/msvc2019_64/include/QtCore/qbasictimer.h \
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/qbindingstorage.h \
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/qbytearray.h \
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/qbytearrayalgorithms.h \
@@ -128,6 +131,7 @@ C:/Users/myheng/Desktop/myChat/client/build/Desktop_Qt_6_6_3_MSVC2019_64bit-Debu
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/qtdeprecationmarkers.h \
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/qtenvironmentvariables.h \
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/qtextstream.h \
+  D:/Qt/6.6.3/msvc2019_64/include/QtCore/qtimer.h \
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/qtimezone.h \
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/qtmetamacros.h \
   D:/Qt/6.6.3/msvc2019_64/include/QtCore/qtnoop.h \
@@ -192,9 +196,12 @@ C:/Users/myheng/Desktop/myChat/client/build/Desktop_Qt_6_6_3_MSVC2019_64bit-Debu
   D:/Qt/6.6.3/msvc2019_64/include/QtNetwork/qtnetworkexports.h \
   D:/Qt/6.6.3/msvc2019_64/include/QtNetwork/qtnetworkglobal.h \
   D:/Qt/6.6.3/msvc2019_64/include/QtWidgets/QDialog \
+  D:/Qt/6.6.3/msvc2019_64/include/QtWidgets/QPushButton \
   D:/Qt/6.6.3/msvc2019_64/include/QtWidgets/QStyle \
   D:/Qt/6.6.3/msvc2019_64/include/QtWidgets/QWidget \
+  D:/Qt/6.6.3/msvc2019_64/include/QtWidgets/qabstractbutton.h \
   D:/Qt/6.6.3/msvc2019_64/include/QtWidgets/qdialog.h \
+  D:/Qt/6.6.3/msvc2019_64/include/QtWidgets/qpushbutton.h \
   D:/Qt/6.6.3/msvc2019_64/include/QtWidgets/qsizepolicy.h \
   D:/Qt/6.6.3/msvc2019_64/include/QtWidgets/qstyle.h \
   D:/Qt/6.6.3/msvc2019_64/include/QtWidgets/qtwidgets-config.h \

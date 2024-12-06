@@ -11,7 +11,11 @@
 	[
 		"C:/Users/myheng/Desktop/myChat/client/icon.ico",
 		"C:/Users/myheng/Desktop/myChat/client/style/stylesheet.qss",
-		"C:/Users/myheng/Desktop/myChat/client/res/ice.png"
+		"C:/Users/myheng/Desktop/myChat/client/res/ice.png",
+		"C:/Users/myheng/Desktop/myChat/client/res/unvisible.png",
+		"C:/Users/myheng/Desktop/myChat/client/res/unvisible_hover.png",
+		"C:/Users/myheng/Desktop/myChat/client/res/visible.png",
+		"C:/Users/myheng/Desktop/myChat/client/res/visible_hover.png"
 	],
 	"LOCK_FILE" : "C:/Users/myheng/Desktop/myChat/client/build/Desktop_Qt_6_6_3_MSVC2019_64bit-Debug/CMakeFiles/client_autogen.dir/AutoRcc_res_EWIEGA46WW_Lock.lock",
 	"MULTI_CONFIG" : false,

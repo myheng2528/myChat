@@ -145,4 +145,8 @@ const std::vector<QString> names = {
 const int CHAT_COUNT_PER_PAGE = 13;
 
 
+
+
+
+
 #endif // GLOBAL_H

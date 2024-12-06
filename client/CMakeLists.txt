@@ -37,6 +37,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         singleton.h
         httpmgr.h httpmgr.cpp
         config.ini
+        timerbtn.h timerbtn.cpp
+        clickedlabel.h clickedlabel.cpp
 
 
     )
@@ -57,7 +59,7 @@ else()
         )
     endif()
 endif()
-
+target_include_directories(client PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(client PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Network)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
